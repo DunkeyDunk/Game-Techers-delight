@@ -8,7 +8,6 @@ public class PlayerController : MonoBehaviour {
     private float moveInputx;
     private float moveInputy;
 
-
     private Rigidbody2D rb;
 
     // Use this for initialization
@@ -20,6 +19,7 @@ public class PlayerController : MonoBehaviour {
 	void Update () {
         moveInputx = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(moveInputx * speed, rb.velocity.y);
+        
 
         moveInputy = Input.GetAxisRaw("Vertical");
         rb.velocity = new Vector2(rb.velocity.x, moveInputy * speed);
