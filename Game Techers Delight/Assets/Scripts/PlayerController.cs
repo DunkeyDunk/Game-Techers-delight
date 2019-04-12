@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 
     public float speed = 10;
+    public float dashAmount = 25;
     private float moveInputx;
     private float moveInputy;
     private bool dashing;
@@ -30,7 +31,13 @@ public class PlayerController : MonoBehaviour {
         {
             dashing = true;
             Debug.Log("dash start");
-            rb.velocity += rb.velocity * 2;
+            Vector2 dashLenght = new Vector2(rb.velocity.x / rb.velocity.magnitude * dashAmount, rb.velocity.y / rb.velocity.magnitude * dashAmount);
+            Debug.Log(dashLenght.magnitude);
+            rb.velocity += dashLenght;
+
+
+            //old dash formula
+            //rb.velocity += rb.velocity * 2;
             StartCoroutine(Dash());
         }
     }
@@ -38,7 +45,6 @@ public class PlayerController : MonoBehaviour {
     {
         yield return new WaitForSeconds(0.2f);
         dashing = false;
-        Debug.Log("dash end");
         yield return new WaitForSeconds(0.1f);
         rb.velocity = new Vector2(0, 0);
     }
