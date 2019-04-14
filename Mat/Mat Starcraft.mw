@@ -101,7 +101,7 @@
 </Task-table>
 <Task/><Presentation-Block>
 <Group view="presentation" inline-output="false" labelreference="L20" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
-<Input><Text-field style="Title" layout="Title">Projekt Startcraft</Text-field>
+<Input><Text-field style="Title" size="24" layout="Title"><Font size="24">Projekt Startcraft</Font></Text-field>
 </Input>
 </Group></Presentation-Block><Presentation-Block>
 <Group view="presentation" inline-output="false" labelreference="L282" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
