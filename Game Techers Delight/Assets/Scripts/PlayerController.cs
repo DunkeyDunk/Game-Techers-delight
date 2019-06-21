@@ -100,6 +100,6 @@ public class PlayerController : MonoBehaviour {
         }
 
         //handles sword rotation
-        sword.rotation = Quaternion.Euler(0f, 0f, rotationAngle);
+        sword.RotateAround(this.transform.position, new Vector3(0,0,1), rotationAngle);
     }
 }
